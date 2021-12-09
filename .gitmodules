@@ -4,3 +4,6 @@
 [submodule "DCFS"]
 	path = DCFS
 	url = git@github.com:DSCLAB/DCFS.git
+[submodule "HDS-DCFS-Docker"]
+	path = HDS-DCFS-Docker
+	url = git@github.com:CW-B-W/HDS-DCFS-Docker.git
