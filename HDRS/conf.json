@@ -11,24 +11,30 @@
         "javaHome": "/usr/lib/jvm/jdk1.8.0_231"
     },
     "maven": {
-        "installDir": "/home/brad/hdrs/apache-maven-3.8.3"
+        "installDir": "/home/brad/hdrs/apache-maven-3.8.3",
+        "url": "https://archive.apache.org/dist/maven/maven-3/3.8.3/binaries/apache-maven-3.8.3-bin.tar.gz"
     },
     "zookeeper": {
-        "installDir": "/home/brad/hdrs/apache-zookeeper-3.6.2-bin"
+        "installDir": "/home/brad/hdrs/apache-zookeeper-3.6.2-bin",
+        "url": "https://archive.apache.org/dist/zookeeper/zookeeper-3.6.2/apache-zookeeper-3.6.2-bin.tar.gz"
     },
     "hadoop": {
-        "installDir": "/home/brad/hdrs/hadoop-3.2.2"
+        "installDir": "/home/brad/hdrs/hadoop-3.2.2",
+        "url": "https://archive.apache.org/dist/hadoop/common/hadoop-3.2.2/hadoop-3.2.2.tar.gz"
     },
     "hbase": {
-        "installDir": "/home/brad/hdrs/hbase-2.3.4"
+        "installDir": "/home/brad/hdrs/hbase-2.3.4",
+        "url": "https://archive.apache.org/dist/hbase/2.3.4/hbase-2.3.4-bin.tar.gz"
     },
     "phoenix": {
-        "installDir": "/home/brad/hdrs/phoenix-hbase-2.3-5.1.2-bin"
+        "installDir": "/home/brad/hdrs/phoenix-hbase-2.3-5.1.2-bin",
+        "url": "https://archive.apache.org/dist/phoenix/phoenix-5.1.2/phoenix-hbase-2.3-5.1.2-bin.tar.gz"
     },
     "hdrs": {
         "installDir": "/home/brad/hdrs/hdrs-1.1.0-without-cdh"
     },
     "phoenixqs": {
-        "installDir": "/home/brad/hdrs/phoenix-queryserver-6.0.0"
+        "installDir": "/home/brad/hdrs/phoenix-queryserver-6.0.0",
+        "url": "https://archive.apache.org/dist/phoenix/phoenix-queryserver-6.0.0/phoenix-queryserver-6.0.0-bin.tar.gz"
     }
 }

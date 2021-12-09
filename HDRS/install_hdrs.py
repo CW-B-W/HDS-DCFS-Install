@@ -89,7 +89,7 @@ def install_maven():
     ex_path = str(Path(ins_path).parent.absolute())
     dir_name = Path(ins_path).name
     os.makedirs(ex_path, exist_ok=True)
-    url = 'https://dlcdn.apache.org/maven/maven-3/3.8.3/binaries/apache-maven-3.8.3-bin.tar.gz'
+    url = get_conf('maven', 'url')
     tar_path = 'downloads/apache-maven-3.8.3-bin.tar.gz'
     if not os.path.exists(tar_path):
         wget_file(url, tar_path)
@@ -157,7 +157,7 @@ def install_zookeeper():
     ex_path = str(Path(ins_path).parent.absolute())
     dir_name = Path(ins_path).name
     os.makedirs(ex_path, exist_ok=True)
-    url = 'https://archive.apache.org/dist/zookeeper/zookeeper-3.6.2/apache-zookeeper-3.6.2-bin.tar.gz'
+    url = get_conf('zookeeper', 'url')
     tar_path = 'downloads/apache-zookeeper-3.6.2-bin.tar.gz'
     if not os.path.exists(tar_path):
         wget_file(url, tar_path)
@@ -191,7 +191,7 @@ def install_hadoop():
     ex_path = str(Path(ins_path).parent.absolute())
     dir_name = Path(ins_path).name
     os.makedirs(ex_path, exist_ok=True)
-    url = 'https://archive.apache.org/dist/hadoop/common/hadoop-3.2.2/hadoop-3.2.2.tar.gz'
+    url = get_conf('hadoop', 'url')
     tar_path = 'downloads/hadoop-3.2.2.tar.gz'
     if not os.path.exists(tar_path):
         wget_file(url, tar_path)
@@ -229,7 +229,7 @@ def install_hbase():
     ex_path = str(Path(ins_path).parent.absolute())
     dir_name = Path(ins_path).name
     os.makedirs(ex_path, exist_ok=True)
-    url = 'https://archive.apache.org/dist/hbase/2.3.4/hbase-2.3.4-bin.tar.gz'
+    url = get_conf('hbase', 'url')
     tar_path = 'downloads/hbase-2.3.4-bin.tar.gz'
     if not os.path.exists(tar_path):
         wget_file(url, tar_path)
@@ -257,7 +257,7 @@ def install_phoenix():
     ex_path = str(Path(ins_path).parent.absolute())
     dir_name = Path(ins_path).name
     os.makedirs(ex_path, exist_ok=True)
-    url = 'https://dlcdn.apache.org/phoenix/phoenix-5.1.2/phoenix-hbase-2.3-5.1.2-bin.tar.gz'
+    url = get_conf('phoenix', 'url')
     tar_path = 'downloads/phoenix-hbase-2.3-5.1.2-bin.tar.gz'
     if not os.path.exists(tar_path):
         wget_file(url, tar_path)
@@ -315,7 +315,7 @@ def install_phoenixqs():
     ex_path = str(Path(ins_path).parent.absolute())
     dir_name = Path(ins_path).name
     os.makedirs(ex_path, exist_ok=True)
-    url = 'https://dlcdn.apache.org/phoenix/phoenix-queryserver-6.0.0/phoenix-queryserver-6.0.0-bin.tar.gz'
+    url = get_conf('phoenixqs', 'url')
     tar_path = 'downloads/phoenix-queryserver-6.0.0-bin.tar.gz'
     if not os.path.exists(tar_path):
         wget_file(url, tar_path)
