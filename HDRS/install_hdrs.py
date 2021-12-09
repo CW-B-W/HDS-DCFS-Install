@@ -34,7 +34,10 @@ def get_conf(cls, key):
         conf_dict['cluster']['slaves_str_comma'] = ','.join(conf_dict['cluster']['slaves'])
         conf_dict['cluster']['slaves_str_lines'] = '\n'.join(conf_dict['cluster']['slaves'])
         conf_dict['cluster']['servers_str_comma'] = conf_dict['cluster']['master'] + ',' + conf_dict['cluster']['slaves_str_comma']
-    return conf_dict[cls][key]
+    if cls in conf_dict and key in conf_dict[cls]:
+        return conf_dict[cls][key]
+    else:
+        return None
 
 stub_dict = None
 def get_stub(stub_cls, key):
@@ -286,10 +289,14 @@ def install_hdrs():
     print('Installing HDRS')
     ins_path = get_conf('hdrs', 'installDir')
     tar_path = '../hds-2021/hdrs-assembly/target/hdrs-1.1.0-without-cdh-bin.tar.gz'
+    url = get_conf('hdrs', 'url')
     if not os.path.exists(tar_path):
-        # `mvn clean package` to compile hdrs
-        print('Compiling HDRS')
-        subprocess.run([get_conf('maven', 'installDir')+'/bin/mvn', 'clean', 'package'], cwd='../hds-2021')
+        if url is not None:
+            wget_file(url, tar_path)
+        else:
+            # `mvn clean package` to compile hdrs
+            print('Compiling HDRS')
+            subprocess.run([get_conf('maven', 'installDir')+'/bin/mvn', 'clean', 'package'], cwd='../hds-2021')
     ex_path = str(Path(ins_path).parent.absolute())
     dir_name = Path(ins_path).name
     os.makedirs(ex_path, exist_ok=True)

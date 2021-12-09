@@ -31,7 +31,8 @@
         "url": "https://archive.apache.org/dist/phoenix/phoenix-5.1.2/phoenix-hbase-2.3-5.1.2-bin.tar.gz"
     },
     "hdrs": {
-        "installDir": "/home/brad/hdrs/hdrs-1.1.0-without-cdh"
+        "installDir": "/home/brad/hdrs/hdrs-1.1.0-without-cdh",
+        "url": ""
     },
     "phoenixqs": {
         "installDir": "/home/brad/hdrs/phoenix-queryserver-6.0.0",
